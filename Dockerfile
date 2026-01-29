@@ -10,6 +10,7 @@ RUN apt update && \
         git \
         default-jdk \
         curl \
+        gdb \
         cgdb \
         python3-pip \
         wget \
@@ -19,13 +20,14 @@ RUN apt update && \
         make \
         nano \
         python3 \
+        python3-tabulate \
+        python3-psutil \
+        python3-pycparser \
         libxext6 \
         libxrender1 \
         libxtst6 \
         libxi6 && \
     ln -s /usr/bin/python3 /usr/bin/python && \
-    pip3 install --upgrade pip && \
-    pip3 install tabulate psutil pycparser && \
     apt clean && rm -rf /var/lib/apt/lists/*
 
 # Set nano as the default editor for Git
